@@ -1,6 +1,14 @@
+# generar documentacion: from clases import Vehiculo
+# mostrar documentacion: help(Vehiculo)
 #pass si en caso no definimos metodos o atributo para la clase; vacia.
 class Vehiculo:
+    """
+    Documentacion de clase
+    """
     def __init__(self, color, marca, encendido = False) -> None:
+        '''
+        Documentacion del constructor
+        '''
         self.color = color
         self.velocidad = 0
         self.marca = marca
