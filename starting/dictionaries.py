@@ -1,4 +1,4 @@
-# dict(...), dict(zip(...)), .items(), .keys(), .values(), .clear()
+# dict(...), dict(zip(...)), .items(), .keys(), .values(), .clear(), .copy(),  dict.fromkeys(iterable, value), pop($key), $dic.update($dic)
 # items(): retorna la clave y valor pero en tuplas
 # clear(): limpiar el diccionario, {}
 diccionario = {'nombre': 'Jose', 'apellidos': 'Cayo Acuña', 'tutoriales': ['Python', "Java", "Oracle"]}
@@ -22,3 +22,19 @@ print(diccionario02.values())
 
 diccionario02.clear()
 print(diccionario02)
+
+diccionario_copia = persona.copy()
+print(diccionario_copia)
+
+#diccionario_from_keys = dict.fromkeys(['a', 'b', 'c', 'd'], 10, 20, 30) #error: TypeError: fromkeys expected at most 2 arguments, got 4
+diccionario_from_keys = dict.fromkeys(['a', 'b', 'c', 'd'], 10)
+print(diccionario_from_keys)
+
+print(diccionario_from_keys.get('a'))
+print(diccionario_from_keys.get('z')) #return None
+
+print("##########")
+print(diccionario)
+diccionario_nuevo = {'nombre':'Pedro', 'nacionalidad': 'Peru'}
+diccionario.update(diccionario_nuevo)
+print(diccionario)
