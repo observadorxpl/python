@@ -1,3 +1,4 @@
+#https://strftime.org/
 from datetime import datetime;
 from datetime import timedelta;
 DIAS_X_ANIO=365
@@ -6,4 +7,6 @@ edad = int(input("Cuál es tu edad:"))
 now = datetime.now()
 
 print(f"{nombre}, naciste en: {now - timedelta(days=edad*365)}")
+print(f"{now:%B}")
+
 #print(f"{nombre} tu fecha de nacimiento fué el )
